@@ -176,32 +176,6 @@ public class ReviewDAO {
 		   return row;
 	   }
 
-	
-/*
-	   //리뷰추가
-	   public int addReview(Review review) {
-		   int row = 0;
-		    String sql = "INSERT INTO reviewtbl (review_no, user_id, product_no, item_no, contents, rating, created_at) VALUES (review_no_seq.NEXTVAL, ?, ?, ?, ?, ?, SYSDATE)";
-		    Connection con = null;
-		    PreparedStatement pst = null;
-		    try {
-		    	con = dbcon();
-		    	pst = con.prepareStatement(sql);
-		    
-		        pst.setString(1, review.getUser_id());
-		        pst.setString(2, review.getProduct_no());
-		        pst.setString(3, review.getItem_no());
-		        pst.setString(4, review.getContents());
-		        pst.setString(5, review.getRating());
-
-		        row = pst.executeUpdate();
-		    } catch (SQLException e) {
-		        e.printStackTrace();
-		    } finally {
-		        close(pst, con); 
-		    } return row;
-	   }
-*/
 	   //리뷰추가
 	   public int addReview(HttpSession session, Review review) {
 		    int row = 0;

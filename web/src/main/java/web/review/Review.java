@@ -22,8 +22,6 @@ public class Review {
 	}
 	
 	
-
-
 	public Review(int review_no,User user, int product_no, String item_no, String contents, String rating,
 			String created_at) {
 		
@@ -48,16 +46,6 @@ public class Review {
 		this.rating = rating;
 	}
 	
-
-//	@Override
-//	public String toString() {
-//		return "Review [review_no=" + review_no + ", user_id=" + id + ", product_no=" + product_no + ", item_no="
-//				+ item_no + ", contents=" + contents + ", rating=" + rating + ", created_at=" + created_at + "]";
-//	}
-
-
-
-
 	@Override
 	    public String toString() {
 	        return "Review [review_no=" + review_no + ", user_id=" + user_id  + 
@@ -74,10 +62,6 @@ public class Review {
 		this.review_no = review_no;
 	}
 
-
-
-    
-    
     //
 	public User getUser() {
         return user;

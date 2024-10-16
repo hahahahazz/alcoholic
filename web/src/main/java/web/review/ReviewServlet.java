@@ -59,8 +59,6 @@ public class ReviewServlet extends HttpServlet{
 
 		Paging paging = new Paging(pageSize,grpSize, totRecords,currentPage);
 		
-
-
 		req.setAttribute("allList", allList);
 		System.out.println(allList);
 		req.setAttribute("paging", paging);

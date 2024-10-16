@@ -17,7 +17,7 @@ public class AddReviewServlet extends HttpServlet{
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
+/*
 		 resp.setCharacterEncoding("UTF-8");
 	        resp.setContentType("text/html;charset=utf-8");
 
@@ -42,6 +42,9 @@ public class AddReviewServlet extends HttpServlet{
 	            String message = URLEncoder.encode("로그인이 필요합니다.", "utf-8");
 	            resp.sendRedirect("/web/review?message=" + message);
 	        }
+*/	        
+	        req.getRequestDispatcher("WEB-INF/views/reviewAdd.jsp").forward(req, resp);
+	        
 	    }
 
 	
