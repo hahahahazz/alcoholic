@@ -7,7 +7,8 @@ public class PageHandler {
 	int pageSize; // 페이지 사이즈 (데이터 건수 , 한 페이지에 보이는 레코드 수 )
 	int totalPage; // 총 페이지수: 전체 페이수
 
-	int grpSize = 4; // 한 그룹에 5깨씩 보겟다
+	//int grpSize = 4; // 한 그룹에 5깨씩 보겟다
+	int grpSize ;
 	int currentGrp; // 현재그룹
 	int grpStartPage; // 현재그룹의 시작번호
 	int grpEndPage; // 현재그룹의 마지막번호
@@ -30,7 +31,27 @@ public class PageHandler {
 		// 페이징관련 값 구하기
 		calcPage();
 	}
+	
+	
+// 리뷰 페이지   위해 추가 
+	public PageHandler(int currentPage, int totRecords, int pageSize, int grpSize) {
+	
+		this.currentPage = currentPage;
+		this.totRecords = totRecords;
+		this.pageSize = pageSize;
+		this.grpSize = grpSize;
+	}
 
+	//전체 레코드 수 업데이트  메서드
+	public void updateTotRecords(int newRecords) {
+		this.totRecords = newRecords;
+		calcPage();
+	}
+//	
+	
+	
+	
+	
 	public int getCurrentPage() {
 		return currentPage;
 	}

@@ -101,11 +101,19 @@
         <% } %>
     </div>
 </div>
+<%
+    User user =(User) session.getAttribute("currentUser");;
 
+    // 로그인 상태일 때만 "NEW REVIEW 작성" 버튼을 보이게 함
+    if (user != null) {
+%>
     <div class="new_wrap">
         <a class="new" href="/web/addReview?p=1"> NEW REVIEW 작성</a>
     </div>
-
+<%
+    }
+    
+    
 %>
 
 <%

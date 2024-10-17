@@ -34,7 +34,7 @@ public class Filter2 implements Filter{
 			System.out.println("아?");
 			
 		} else {	//로그인 이 되지 않았다면.
-			resp.sendRedirect("/web/login");
+			resp.sendRedirect("/web.login/login");
 			// 로그인 해라 !! 
 		}
 		

@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import web.model.User;
-@WebServlet("/addReview")
+@WebServlet("/addReview.do")
 public class AddReviewServlet extends HttpServlet{
 
 	@Override
@@ -41,8 +41,8 @@ public class AddReviewServlet extends HttpServlet{
 	            // 비회원인 경우, 경고 메시지와 함께 리뷰 메인 페이지로 리다이렉트
 	            String message = URLEncoder.encode("로그인이 필요합니다.", "utf-8");
 	            resp.sendRedirect("/web/review?message=" + message);
-	        }
-*/	        
+	        }    
+*/	       
 	        req.getRequestDispatcher("WEB-INF/views/reviewAdd.jsp").forward(req, resp);
 	        
 	    }

@@ -1,4 +1,3 @@
-<%@page import="web.model.User"%>
 <%@page import="java.util.HashMap"%>
 <%@page import="web.review.Review"%>
 <%@page import="java.util.ArrayList"%>
@@ -42,11 +41,7 @@
             <table>
                 <tr>
                     <td><label for="user_id">작성자:</label></td>
-                    <% User currentUser = (User) session.getAttribute("currentUser");
-                    //사용자 Id 가져오기
-                    String userId = (currentUser != null) ? currentUser.getUser_id() : "";
-                    %>
-                    <td><input type="text" name="user_id" value="<%=userId %>" readonly></td>
+                    <td><input type="text" name="user_id" value="<%= request.getAttribute("currentUserId") %>" readonly></td>
                 </tr>
                 <tr>
                     <td><label for="product_no">제품 번호:</label></td>

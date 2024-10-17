@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-@WebServlet("/review")
+@WebServlet("/review.do")
 public class ReviewServlet extends HttpServlet{
 
 	@Override
@@ -57,7 +57,7 @@ public class ReviewServlet extends HttpServlet{
         }
 		
 
-		Paging paging = new Paging(pageSize,grpSize, totRecords,currentPage);
+		PageHandler paging = new PageHandler(pageSize,grpSize, totRecords,currentPage);
 		
 		req.setAttribute("allList", allList);
 		System.out.println(allList);

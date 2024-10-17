@@ -1,6 +1,6 @@
 package web.review;
 
-public class Paging {
+public class PageHandler {
 
 	//먼저 설정할 부분들
 	//페이지 사이즈  한 페이지의 글 개수
@@ -24,7 +24,7 @@ public class Paging {
 	int grpStartPage;
 	int grpEndPage;
 	
-	public Paging(int pageSize, int grpSize, int totRecords, int currentPage) {
+	public PageHandler(int pageSize, int grpSize, int totRecords, int currentPage) {
 		this.pageSize = pageSize;
 		this.grpSize = grpSize;
 		this.totRecords = totRecords;
@@ -90,7 +90,7 @@ public class Paging {
 	
 
 	public static void main(String[] args) {
-	    Paging page = new Paging(10, 5, 153, 13); // 예시 값
+	    PageHandler page = new PageHandler(10, 5, 153, 13); // 예시 값
 	    System.out.println("Total Pages: " + page.getTotalPage());
 	    System.out.println("Current Group: " + page.getCurrentGroup());
 	    System.out.println("Group Start Page: " + page.getGrpStartPage());
